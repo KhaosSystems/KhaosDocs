@@ -1,0 +1,39 @@
+{
+  "moves": {
+    "/Game/StarterContent/Architecture": "/Game/Environment/Architecture",
+    "/Game/StarterContent/Props": "/Game/Environment/Props",
+    "/Game/StarterContent/HDRI": "/Game/Environment/Sky",
+    "/Game/StarterContent/Audio": "/Game/Audio/SFX",
+    "/Game/StarterContent/Blueprints": "/Game/Blueprints",
+    "/Game/StarterContent/Materials": "/Game/Materials",
+    "/Game/StarterContent/Textures": "/Game/Textures",
+    "/Game/StarterContent/Particles": "/Game/VFX/Particles",
+    "/Game/StarterContent/Maps": "/Game/Maps",
+    "/Game/StarterContent/Shapes": "/Game/Environment/Shapes"
+  },
+  "add": {
+    "/Game/AI": ["BP_EnemyController", "BP_PatrolRoute"],
+    "/Game/Audio/Music": ["BP_MusicPlayer"],
+    "/Game/Audio/Dialogue": ["BP_DialoguePlayer"],
+    "/Game/Blueprints/Core": ["BP_GameMode", "BP_PlayerController"],
+    "/Game/Cinematics": ["BP_IntroDirector"],
+    "/Game/Data/Curves": ["BP_CurveHolder"],
+    "/Game/Data/DataTables": ["BP_TableHolder"],
+    "/Game/Environment/Blockout": ["BP_BlockoutKit"],
+    "/Game/Environment/Foliage": ["BP_GrassSpawner"],
+    "/Game/Environment/Landscape": ["BP_Terrain"],
+    "/Game/Localization": ["BP_LocaleSwitch"],
+    "/Game/Maps/L_Forest": ["BP_ForestDirector"],
+    "/Game/Maps/L_Harbor": ["BP_HarborDirector"],
+    "/Game/Studio": ["BP_Credits"],
+    "/Game/Tools": ["BP_LevelChecker"],
+    "/Game/ThirdParty": ["BP_Vendor"],
+    "/Game/UI/Fonts": ["BP_FontHolder"],
+    "/Game/UI/HUD": ["BP_HUD"],
+    "/Game/UI/Widgets": ["BP_MenuHolder"],
+    "/Game/Vehicles": ["BP_Truck", "BP_Boat"],
+    "/Game/Weapons": ["BP_Rifle", "BP_Pistol"],
+    "/Game/Weapons/Melee": ["BP_Sword"],
+    "/Game/Weapons/Ranged": ["BP_Bow"]
+  }
+}
