@@ -7,10 +7,12 @@ nothing becomes a `.uasset`.
 one renderer, markdown in both cases. A `.txt` with no markup simply comes out as plain paragraphs.
 New documents are created as `.md`.
 
-Put a `.md` wherever it belongs — beside the assets it describes, or in a `Docs` folder if you
-prefer to keep them together. Both work; the Content Browser shows the file where it sits on disk.
+Put a `.md` wherever it belongs — beside the assets it describes, or in a `Content/Docs` folder if
+you prefer to keep them together. Both work; the Content Browser shows the file where it sits on
+disk.
 
-This page is one of them, at `Plugins/KhaosDocs/Content/Docs/KhaosDocs.md`.
+This page sits outside `Content`, at `Plugins/KhaosDocs/Docs/KhaosDocs.md`, so only the
+documentation window lists it.
 
 ## Where documents are found
 

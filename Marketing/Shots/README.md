@@ -3,7 +3,7 @@
 `render.py` builds the listing images from these PNGs. They are real captures from a throwaway sample project in the
 launcher build of UE 5.8, at 100 % editor scale, with the plugin built by BuildPlugin. Its assets are Epic's template and
 Starter Content, moved into the layout in `sample/layout.json`. Its documents are in `sample/`, with a small `QuestSystem`
-content plugin to show plugin docs. The plugin's own `Content/Docs` is removed from the sample's copy, because a buyer's
+content plugin to show plugin docs. The plugin's own `Docs` folder is removed from the sample's copy, because a buyer's
 install doesn't list it (see the listing's FAQ).
 
 `capture.py` builds the project (see its docstring):
