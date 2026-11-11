@@ -54,7 +54,7 @@ No code or cooked content: the module only builds for Editor targets.
 - **Supported development platforms:** Windows
 - **Supported target build platforms:** Windows, Mac, Linux
 - **Supported engine versions:** 5.8
-- **Documentation:** https://github.com/KhaosSystems/KhaosDocs/blob/main/Content/Docs/KhaosDocs.md
+- **Documentation:** https://docs.khaos.systems/unreal/khaos-docs/
 - **Important notes:** Put a `.md` file under `Content`, or right-click a folder in the Content Browser and choose Create Document. Open the Documentation window from the toolbar or Tools > Documentation.
 
 ## Version notes (1.0.0)

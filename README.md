@@ -20,7 +20,7 @@ Unreal Engine 5.8. Editor-only; it adds nothing to a packaged game.
 
 ## Docs
 
-[KhaosDocs](Content/Docs/KhaosDocs.md) and [Authoring](Content/Docs/Authoring.md), which also open
+[KhaosDocs](Docs/KhaosDocs.md) and [Authoring](Docs/Authoring.md), which also open
 in the editor's documentation window.
 
 ## Development
