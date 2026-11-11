@@ -3,7 +3,7 @@
 	"Version": 1,
 	"VersionName": "0.1",
 	"FriendlyName": "Khaos Docs",
-	"Description": "Surfaces plain markdown files from any plugin's Content/Docs folder as Content Browser entries, with an in-editor document editor and a project-wide table of contents.",
+	"Description": "Surfaces plain markdown files under Content as Content Browser entries, and each plugin's Docs folder in a documentation window, with an in-editor document editor and a project-wide table of contents.",
 	"Category": "Khaos",
 	"CreatedBy": "Khaos Systems",
 	"CreatedByURL": "https://github.com/KhaosSystems",
