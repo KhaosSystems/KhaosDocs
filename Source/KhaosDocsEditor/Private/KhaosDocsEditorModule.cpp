@@ -7,6 +7,7 @@
 #include "ContentBrowserFileDataSource.h"
 #include "IContentBrowserDataModule.h"
 #include "Misc/CoreDelegates.h"
+#include "Misc/EngineVersionComparison.h"
 #include "Framework/Application/SlateApplication.h"
 #include "Framework/Docking/TabManager.h"
 #include "HAL/FileManager.h"
@@ -44,6 +45,16 @@ namespace
 
 	/** Must match the name given to the data source object, since activation is looked up by name. */
 	const FName KhaosDocsDataSourceName(TEXT("KhaosDocsData"));
+
+	/** 5.8 deprecates FCoreDelegates::OnPostEngineInit in favour of GetOnPostEngineInit(). */
+	FSimpleMulticastDelegate& PostEngineInitDelegate()
+	{
+#if UE_VERSION_NEWER_THAN_OR_EQUAL(5, 8, 0)
+		return FCoreDelegates::GetOnPostEngineInit();
+#else
+		return FCoreDelegates::OnPostEngineInit;
+#endif
+	}
 
 	/** Content Browser path of a mounted root without its trailing slash, e.g. "/KhaosUI". */
 	FString MakeRootVirtualPath(const FString& InAssetPath)
@@ -240,7 +251,7 @@ void FKhaosDocsEditorModule::StartupModule()
 
 	// Activation needs the Content Browser data subsystem, which is an editor subsystem and so
 	// does not exist yet at module startup. PostEngineInit is the first point it is available.
-	FCoreDelegates::OnPostEngineInit.AddRaw(this, &FKhaosDocsEditorModule::ActivateDataSource);
+	PostEngineInitDelegate().AddRaw(this, &FKhaosDocsEditorModule::ActivateDataSource);
 
 	FPackageName::OnContentPathMounted().AddRaw(this, &FKhaosDocsEditorModule::OnContentPathMounted);
 	FPackageName::OnContentPathDismounted().AddRaw(this, &FKhaosDocsEditorModule::OnContentPathDismounted);
@@ -264,7 +275,7 @@ void FKhaosDocsEditorModule::ShutdownModule()
 		FGlobalTabmanager::Get()->UnregisterNomadTabSpawner(KhaosDocsBrowserTabId);
 	}
 
-	FCoreDelegates::OnPostEngineInit.RemoveAll(this);
+	PostEngineInitDelegate().RemoveAll(this);
 	FPackageName::OnContentPathMounted().RemoveAll(this);
 	FPackageName::OnContentPathDismounted().RemoveAll(this);
 
