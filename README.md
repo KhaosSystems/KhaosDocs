@@ -5,6 +5,8 @@
 ![Unreal Engine](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/KhaosSystems/KhaosDocs/badges/unreal.json)
 ![Lines of code](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/KhaosSystems/KhaosDocs/badges/loc.json)
 [![Release](https://img.shields.io/github/v/release/KhaosSystems/KhaosDocs)](https://github.com/KhaosSystems/KhaosDocs/releases)
+[![Windows](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/KhaosSystems/KhaosDocs/badges/windows.json)](https://github.com/KhaosSystems/KhaosDocs/actions/workflows/ci.yml)
+[![macOS](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/KhaosSystems/KhaosDocs/badges/macos.json)](https://github.com/KhaosSystems/KhaosDocs/actions/workflows/ci.yml)
 
 Markdown documentation in the Unreal Content Browser. Any `.md` or `.txt` under a `Content` folder
 shows up where it sits on disk and opens in an in-editor viewer and editor, with a table of
